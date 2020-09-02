@@ -4,7 +4,7 @@
       <h1>Seja Bem-vindo!</h1>
       <img src="../assets/kids.jpg" alt="" width="500" />
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <router-link to="/" class="md-dense md-raised md-primary">
+      <router-link to="/home" class="md-dense md-raised md-primary">
         <md-button class="md-dense md-raised md-primary">Clique aqui para começar</md-button>
       </router-link>
     </div>
