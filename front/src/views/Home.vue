@@ -1,10 +1,6 @@
 <template>
   <div class="home">
-    <div id="nav">
-      <router-link to="/home">Home</router-link> |
-      <router-link to="/register">Cadastre-se</router-link>
-    </div>
-
+    
     <HelloWorld msg="Estante Encantada"/>
 
     <div class="cards-container">
@@ -68,6 +64,7 @@
         </md-card-actions>
       </md-card>
     </div>
+
   </div>
 </template>
 
@@ -90,7 +87,7 @@ export default {
 
   .cards-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: stretch;
@@ -98,10 +95,10 @@ export default {
   }
 
   .md-card {
-    width: 33.33%;
-  }
+    margin-bottom: 5%;
+  } 
 
-  .md-card + .md-card {
-    margin-left: 2%;
+  .md-card:last-child {
+    margin-bottom: 25%;
   }
 </style>

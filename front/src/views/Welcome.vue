@@ -28,7 +28,7 @@
 
   .content-box {
     border-radius: 20px;
-    width: 50%;
+    width: 80%;
     padding: 20px;
     box-shadow: 2px 2px 2px #ccc;
     background-color: #fff;
