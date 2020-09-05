@@ -12,6 +12,11 @@ Vue.use(VueRouter)
   },
   {
     path: '/',
+    name: 'Splash',
+    component: () => import('../views/Splash.vue')
+  },
+  {
+    path: '/welcome',
     name: 'Welcome',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
