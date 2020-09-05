@@ -29,7 +29,7 @@
 
     <div class="step-3 hide">
         <div class="speech-balloon">
-            <p>Você sabia que o seu aniversário é uma data mágica?</p>
+            <p>Você sabia que o seu aniversário<br /> é uma data mágica?</p>
         </div>
         <md-icon class="icon md-size-5x">sentiment_satisfied_alt</md-icon>
 
@@ -142,11 +142,10 @@
     }
 
     .onboarding .speech-balloon {
-        padding: 20px;
-        max-width: 300px;
+        padding: 20px 65px;
+        min-width: 300px;
         height: 230px;
-        background: url('../assets/balloon_01.png') no-repeat 0 0/contain;
-        margin-left: 250px;
+        background: url('../assets/balloon_01.png') no-repeat center/contain;
     }
 
     .splash .icon {
@@ -161,6 +160,8 @@
         justify-content: center;
         align-items: stretch;
         align-content: stretch;
+        margin-bottom: 20px;
+        padding: 0 10px;
     }
 
     .carousel-stories .cover {
@@ -170,7 +171,7 @@
     }
 
     .cover + .cover {
-        margin-left: 20px;
+        margin-left: 10px;
     }
 
     .carousel-stories .cover .story-name {
