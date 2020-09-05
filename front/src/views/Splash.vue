@@ -15,7 +15,8 @@
     }, 2000);
 
     setTimeout(function(){
-        router.push({ path:'home' });
+        // TODO: colocar condicao se for primeiro acesso envia para onboarding / se nao envia para home
+        router.push({ path:'onboarding' });
     }, 3000);
 </script>
 

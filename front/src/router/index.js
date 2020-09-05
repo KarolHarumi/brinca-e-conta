@@ -16,6 +16,11 @@ Vue.use(VueRouter)
     component: () => import('../views/Splash.vue')
   },
   {
+    path: '/onboarding',
+    name: 'Onboarding',
+    component: () => import('../views/Onboarding.vue')
+  },
+  {
     path: '/welcome',
     name: 'Welcome',
     // route level code-splitting
