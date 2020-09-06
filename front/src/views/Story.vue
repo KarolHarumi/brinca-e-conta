@@ -1,5 +1,15 @@
 <template>
   <div class="story">
+    <div class="choice-modal hide">
+      <p>Que susto! Ainda bem que essa plantinha ajudou a Naiá a chegar a superfície!</p>
+
+      <div class="question">
+        <p>Vamos também ajudar a Naiá e escolher onde a planta pode deixar a indiazinha em segurança!</p>
+        <span class="button-primary" @click="getChoice()">Na grama verdinha</span>
+        <span class="button-primary" @click="getChoice()">Ao lado de uma árvore florida</span>
+      </div>
+    </div>
+
     <div class="nav">
       <h1>Lenda da Vitória Régia</h1>
       <h2>Olá {{ name }}!</h2>
@@ -10,12 +20,14 @@
     <div id="containerScenario">
       <img src="../assets/character.png" width="250" alt="Naiá">
     </div>
+
   </div>
 </template>
 
 <script>
 
 export default {
+  
   data: function() {
       return {
         name: `${localStorage.getItem('name')}`,
@@ -24,11 +36,18 @@ export default {
   },
 
   methods: {
+
+    getChoice() {
+      var selected = document.querySelector('.button-primary').textContent;
+      document.querySelector('.choice-modal').classList.add('hide');
+      console.log('selected', selected);
+    },
+
     addComicBubbles() {
       document.querySelector('.nav').classList.add('hide');
 
-      window.CharactersBubbles = new window.ComicBubbles("containerScenario", {canvas: {readonly: false}}, {bubble: [
-        {id: 'b1', text: '', x: '20%', y: '20%', width: 'auto', height: 'auto', fontSize: '20px', background: '#fff', color: '#000', bubbleStyle: 'none', tailLocation: 'e', tailX: 0, tailY: 0, visible: false}
+      window.CharactersBubbles = new window.ComicBubbles("containerScenario", {canvas: {readonly: true}}, {bubble: [
+        {id: 'b1', x: '25%', y: '100', fontSize: '20px', fontFamily: 'Tahoma', background: '#fff', color: '#000', bubbleStyle: 'none', tailLocation: 'e', tailX: 0, tailY: 0, visible: false}
       ]});
 
       const dialogs = [
@@ -55,7 +74,12 @@ export default {
         {
           delay: 1000,
           sentence: 'Naiá era uma amante da natureza.\n Cuidava de rosas e plantas com\n muito carinho e amor. E adorava se\n enfeitar com elas.',
-          hasChoice: true
+          hasChoice: true,
+          choice: {
+            text: 'Vamos ajudar a indiazinha Naiá!',
+            question: 'Por qual caminho ela precisa ir pra ver a luz da lua?',
+            alternatives: ['Na beira do rio', 'Dentro da floresta']
+          }
         },
         {
           delay: 1000,
@@ -65,7 +89,12 @@ export default {
         {
           delay: 1000,
           sentence: 'Até que em um dia de lua cheia ela\n notou de sua oca que o brilho da\n lua estava mais intenso e saiu\n para contempla-lo.',
-          hasChoice: true
+          hasChoice: true,
+          choice: {
+            text: 'Vamos ajudar a indiazinha Naiá!',
+            question: 'Por qual caminho ela precisa ir pra ver a luz da lua?',
+            alternatives: ['Na beira do rio', 'Dentro da floresta']
+          }
         },
         {
           delay: 1000,
@@ -80,7 +109,12 @@ export default {
         {
           delay: 1000,
           sentence: 'Foi aí que viu a figura de um belo\n índio refletido na água vindo da\n Luz da Lua.',
-          hasChoice: true
+          hasChoice: true,
+          choice: {
+            text: 'Nossa, a indiazinha Naiá é bem curiosa e acabou vendo o rosto de alguém muito bonito!',
+            question: 'Chegou a hora de escolher! O que a Naiá vai fazer?',
+            alternatives: ['Ela fica encantada com o indiozinho!', 'Ela vai tentar dar um beijo na imagem']
+          }
         },
         {
           delay: 1000,
@@ -95,7 +129,12 @@ export default {
         {
           delay: 1000,
           sentence: 'Até que um facho de luz atinge\n algumas plantas, raízes e algas do\n rio que despertam e se entrelaçam\n envolvendo Naiá.',
-          hasChoice: false
+          hasChoice: true,
+          choice: {
+            text: 'Que susto! Ainda bem que essa plantinha ajudou a Naiá a chegar a superfície!',
+            question: 'Vamos também ajudar a Naiá e escolher onde a planta pode deixar a indiazinha em segurança!',
+            alternatives: ['Na grama verdinha', 'Ao lado de uma árvore florida']
+          }
         },
         {
           delay: 1000,
@@ -126,6 +165,11 @@ export default {
         function buildBalloonEffect() {
           index++;
           
+          if(dialogs[index].hasChoice) {
+            console.log('haschoice');
+            document.querySelector('.choice-modal').classList.remove('hide');
+          }
+
           if(index <= (totalDialogs - 1)) { 
             Bubble1.delay(500).fadeOut(function(){
               Bubble1.delay(dialogs[index].delay).setText(dialogs[index].sentence).setWidth('auto').setHeight('auto').fadeIn();
@@ -151,6 +195,32 @@ export default {
 </script>
 
 <style scoped>
+
+.hide {
+  display: none!important;
+}
+.choice-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  height: 100vh;
+}
+
+
+
+
   .story {
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -180,7 +250,7 @@ export default {
 
   h1 {
     line-height: 1.3;
-    font-family: 'Grandstander', cursive;
+    font-family: 'Fredoka One', cursive;
     font-weight: 900;
     font-size: 31px;
   }
@@ -198,9 +268,27 @@ export default {
 
   #containerScenario img {
     position: absolute;
-    bottom: 0;
+    bottom: 50px;
     left: 0;
     right: 0;
     margin: auto;
+  }
+
+  /*TODO: CRIAR COMPONENTE*/
+  .button-primary {
+    display: block;
+    background-color: #ECBF2B;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 35px;
+    box-shadow: 0 2px 0 2px #62BBE0;
+    font-size: 21px;
+    font-family: 'Fredoka One', cursive;
+    border: 0;
+    text-align: center;
+  }
+
+  .button-primary + .button-primary {
+    margin-top: 20px;
   }
 </style>
