@@ -11,7 +11,7 @@
       </div>
     </div>
 
-    <div class="containerScenario">
+    <div class="container-scenario">
       <div class="nav" @click="startStory()">
         <h1>Lenda da Vitória Régia</h1>
         <h2>Olá {{ name }}!</h2>
@@ -153,7 +153,7 @@ export default {
         }
       ];
 
-      document.querySelector('.containerScenario').addEventListener('click', () => {
+      document.querySelector('.container-scenario').addEventListener('click', () => {
         const totalDialogs = dialogs.length;
         this.index++;
 
@@ -223,6 +223,7 @@ export default {
     color: #F7F536;
     position: absolute;
     top: 20px;
+    padding: 0 20px;
   }
 
   .story .nav  h2 {
@@ -286,7 +287,6 @@ export default {
     margin-top: 25px;
   }
 
-  /*  */
   #scenario {
     position: relative;
   }
@@ -306,5 +306,11 @@ export default {
     color: #fff;
     font-size: 18px;
     line-height: 1.3;
+  }
+
+  .story,
+  .container-scenario {
+    max-width: 450px;
+    margin: 0 auto;
   }
 </style>
