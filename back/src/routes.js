@@ -8,11 +8,12 @@ const UserController = require("./app/controllers/UserController");
 const userController = new UserController(UserService, SkillService);
 const SessionController = require("./app/controllers/SessionController");
 const sessionController = new SessionController(UserService);
-const StoryController = require("./app/controllers/StoryController");
 const OnboardingController = require("./app/controllers/OnboardingController");
 const onboardingController = new OnboardingController(StoryService);
 const SkillController = require("./app/controllers/SkillController");
 const skillController = new SkillController(SkillService);
+const StoryController = require("./app/controllers/StoryController");
+const storyController = new StoryController(StoryService);
 const ChallengeController = require("./app/controllers/ChallengeController");
 
 const authMiddleware = require("./app/middlewares/auth");
@@ -28,8 +29,8 @@ routes.get("/onboarding/:age", (req, res) =>
 routes.use(authMiddleware);
 
 routes.put("/users/:id/skills", (req, res) => skillController.update(req, res));
-routes.get("/stories", (req, res) => StoryController.index(req, res));
-routes.get("/stories/:id", (req, res) => StoryController.show(req, res));
+routes.get("/stories", (req, res) => storyController.index(req, res));
+routes.get("/stories/:id", (req, res) => storyController.show(req, res));
 routes.get("/stories/:id/challenges", (req, res) =>
   ChallengeController.index(req, res)
 );

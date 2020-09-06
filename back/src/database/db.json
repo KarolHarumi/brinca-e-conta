@@ -68,6 +68,68 @@
       "level_id": 5
     }
   ],
+  "stories": [
+    {
+      "id": 1,
+      "title": "A lenda da vitória régia",
+      "cover_img_path": ""
+    },
+    {
+      "id": 2,
+      "title": "Ninguém é igual a ninguém",
+      "cover_img_path": ""
+    },
+    {
+      "id": 3,
+      "title": "Não gosto de salada",
+      "cover_img_path": ""
+    },
+    {
+      "id": 4,
+      "title": "Princesa Arabela mimada que só ela",
+      "cover_img_path": ""
+    },
+    {
+      "id": 5,
+      "title": "Marcelo, marmelo, martelo",
+      "cover_img_path": ""
+    },
+    {
+      "id": 6,
+      "title": "ABC em libras",
+      "cover_img_path": ""
+    },
+    {
+      "id": 7,
+      "title": "A aranha Dailili",
+      "cover_img_path": ""
+    },
+    {
+      "id": 8,
+      "title": "A bela e a fera",
+      "cover_img_path": ""
+    },
+    {
+      "id": 9,
+      "title": "Cada bicho com seu capricho",
+      "cover_img_path": ""
+    },
+    {
+      "id": 10,
+      "title": "Meus olhos são teus olhos",
+      "cover_img_path": ""
+    },
+    {
+      "id": 11,
+      "title": "Chapeuzinho amarelo",
+      "cover_img_path": ""
+    },
+    {
+      "id": 12,
+      "title": "A princesa que era uma vez",
+      "cover_img_path": ""
+    }
+  ],
   "onboarding": [
     {
       "id": 1,
