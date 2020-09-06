@@ -1,5 +1,73 @@
 {
   "users": [],
+  "user_skill_level": [],
+  "skills": [
+    {
+      "id": 1,
+      "description": "associação"
+    },
+    {
+      "id": 2,
+      "description": "ortografia"
+    },
+    {
+      "id": 3,
+      "description": "interpretação"
+    }
+  ],
+  "levels": [
+    {
+      "id": 1,
+      "level": "Iniciante 1"
+    },
+    {
+      "id": 2,
+      "level": "Iniciante 2"
+    },
+    {
+      "id": 3,
+      "level": "Médio 1"
+    },
+    {
+      "id": 4,
+      "level": "Médio 2"
+    },
+    {
+      "id": 5,
+      "level": "Avançado 1"
+    },
+    {
+      "id": 6,
+      "level": "Avançado 2"
+    }
+  ],
+  "age_level": [
+    {
+      "id": 1,
+      "age": 5,
+      "level_id": 1
+    },
+    {
+      "id": 2,
+      "age": 6,
+      "level_id": 3
+    },
+    {
+      "id": 3,
+      "age": 7,
+      "level_id": 3
+    },
+    {
+      "id": 4,
+      "age": 8,
+      "level_id": 5
+    },
+    {
+      "id": 5,
+      "age": 9,
+      "level_id": 5
+    }
+  ],
   "onboarding": [
     {
       "id": 1,

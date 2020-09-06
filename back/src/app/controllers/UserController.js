@@ -1,6 +1,7 @@
 class UserController {
-  constructor(UserService) {
+  constructor(UserService, SkillService) {
     this.UserService = UserService;
+    this.SkillService = SkillService;
   }
 
   async store(req, res) {
@@ -10,9 +11,13 @@ class UserController {
       if (userExists)
         return res.status(400).json({ error: "User already exists" });
 
-      const { id, name, email } = await this.UserService.register(req.body);
+      const { id, name, email, age } = await this.UserService.register(
+        req.body
+      );
 
-      return res.json({ id, name, email });
+      await this.SkillService.registerInitialSkillLevel(id, age);
+
+      return res.json({ id, name, email, age });
     } catch (err) {
       return res.status(500).json({
         error: `internal error: ${JSON.stringify(err.stack ? err.stack : err)}`,

@@ -1,8 +1,13 @@
+const moment = require("moment");
 const bcrypt = require("bcryptjs");
 
 class UserService {
   constructor() {
     // -
+  }
+
+  _calculateAge(birthDate) {
+    return moment().diff(birthDate, "years");
   }
 
   async _generatePassword(password) {
@@ -23,7 +28,9 @@ class UserService {
     newUser.password_hash = await this._generatePassword(newUser.password);
     delete newUser.password;
 
-    return database.set("users", newUser);
+    const response = database.set("users", newUser);
+
+    return { ...response, age: this._calculateAge(newUser.birth_date) };
   }
 }
 
