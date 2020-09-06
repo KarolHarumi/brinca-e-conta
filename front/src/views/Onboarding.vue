@@ -1,6 +1,6 @@
 <template>
   <div class="onboarding">
-    <div class="step-1">
+    <div class="steps step-1">
         <div class="speech-balloon">
             <p>Olá!! Que bom ter você por aqui!</p>
             <p>Me chamo xxxx e sou o seu parceiro nesse mundo fantástico da imaginação!</p>
@@ -11,7 +11,7 @@
         <md-icon class="icon md-size-5x">sentiment_satisfied_alt</md-icon>
     </div>
 
-    <div class="step-2 hide">
+    <div class="steps step-2 hide">
         <div class="speech-balloon">
             <p>Me conta mais sobre você! </p>
         </div>
@@ -27,7 +27,7 @@
         </md-button>
     </div>
 
-    <div class="step-3 hide">
+    <div class="steps step-3 hide">
         <div class="speech-balloon">
             <p>Você sabia que o seu aniversário<br /> é uma data mágica?</p>
         </div>
@@ -43,7 +43,7 @@
         </md-button>
     </div>
 
-    <div class="step-4 hide">
+    <div class="steps step-4 hide">
 
         <div class="container-stories">
             <h2>Escolha nossa história!</h2>
@@ -141,10 +141,15 @@
         text-align: center;
     }
 
+    .onboarding .steps {
+        display: inline-block;
+        width: 300px;
+    }
+
     .onboarding .speech-balloon {
-        padding: 20px 65px;
-        min-width: 300px;
+        width: 100%;
         height: 230px;
+        padding: 20px 20px;
         background: url('../assets/balloon_01.png') no-repeat center/contain;
     }
 
