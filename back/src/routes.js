@@ -13,6 +13,8 @@ const onboardingController = new OnboardingController(StoryService);
 const AnswerController = require("./app/controllers/AnswerController");
 const ChallengeController = require("./app/controllers/ChallengeController");
 
+const authMiddleware = require("./app/middlewares/auth");
+
 const routes = new Router();
 
 routes.post("/users", (req, res) => userController.store(req, res));
@@ -21,7 +23,7 @@ routes.get("/onboarding/:age", (req, res) =>
   onboardingController.index(req, res)
 );
 
-// Authenticated
+routes.use(authMiddleware);
 
 routes.post("/answers", (req, res) => AnswerController.store(req, res));
 routes.get("/stories", (req, res) => StoryController.index(req, res));
