@@ -1,38 +1,46 @@
 <template>
   <div class="splash">
+    <span>&nbsp;</span>
     <h1>
-      <md-icon class="icon md-size-3x">face</md-icon><br />
-      Brinca e Conta
+      <img src="../assets/splash_icon.png" width="129" alt="brinca e conta" />
+      <span class="title">brinca e conta</span>
     </h1>
+
+    <button class="button-primary" @click="defineAccess()">Começar</button>
   </div>
 </template>
 
 <script>
 import router from "./../router";
+
 export default {
   name: "Splash",
+
+  methods: {
+    defineAccess() {
+      const name = localStorage.getItem("name");
+      const age = localStorage.getItem("age");
+
+      if (name && age) {
+        router.push({ path: "home" });
+      } else {
+        router.push({ path: "onboarding" });
+      }
+    },
+  },
 };
-
-setTimeout(function () {
-  document.querySelector(".splash").setAttribute("style", "opacity: 0");
-}, 2000);
-
-setTimeout(function () {
-  // TODO: colocar condicao se for primeiro acesso envia para onboarding / se nao envia para home
-  router.push({ path: "onboarding" });
-}, 3000);
 </script>
 
 <style scoped>
 .splash {
   display: inline-block;
-  background-color: #f9c74f;
+  background-color: #78d6fd;
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   align-content: center;
   color: #000;
@@ -41,10 +49,26 @@ setTimeout(function () {
 
 .splash h1 {
   text-align: center;
+  font-size: 43px;
+  font-family: "Fredoka One", cursive;
+  letter-spacing: -1.07px;
+  color: #ffffff;
+  text-shadow: 0px 2px 1px #65bbde;
 }
 
-.splash .icon {
-  margin-bottom: 20px;
-  color: #000;
+.splash .title {
+  display: block;
+  margin-top: 20px;
+}
+
+.splash .button-primary {
+  background-color: #ecbf2b;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 35px;
+  box-shadow: 0 2px 0 2px #62bbe0;
+  font-size: 21px;
+  font-family: "Fredoka One", cursive;
+  border: 0;
 }
 </style>
