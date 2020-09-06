@@ -1,3 +1,121 @@
 {
-  "users": []
+  "users": [],
+  "onboarding": [
+    {
+      "id": 1,
+      "story_id": 1,
+      "title": "A lenda da vitória régia",
+      "cover_img_path": "",
+      "age": [
+        5
+      ]
+    },
+    {
+      "id": 2,
+      "story_id": 2,
+      "title": "Ninguém é igual a ninguém",
+      "cover_img_path": "",
+      "age": [
+        5
+      ]
+    },
+    {
+      "id": 3,
+      "story_id": 3,
+      "title": "Não gosto de salada",
+      "cover_img_path": "",
+      "age": [
+        5
+      ]
+    },
+    {
+      "id": 4,
+      "story_id": 4,
+      "title": "Princesa Arabela mimada que só ela",
+      "cover_img_path": "",
+      "age": [
+        5
+      ]
+    },
+    {
+      "id": 5,
+      "story_id": 5,
+      "title": "Marcelo, marmelo, martelo",
+      "cover_img_path": "",
+      "age": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": 6,
+      "story_id": 6,
+      "title": "ABC em libras",
+      "cover_img_path": "",
+      "age": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": 7,
+      "story_id": 7,
+      "title": "A aranha Dailili",
+      "cover_img_path": "",
+      "age": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": 8,
+      "story_id": 8,
+      "title": "A bela e a fera",
+      "cover_img_path": "",
+      "age": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": 9,
+      "story_id": 9,
+      "title": "Cada bicho com seu capricho",
+      "cover_img_path": "",
+      "age": [
+        8,
+        9
+      ]
+    },
+    {
+      "id": 10,
+      "story_id": 10,
+      "title": "Meus olhos são teus olhos",
+      "cover_img_path": "",
+      "age": [
+        8,
+        9
+      ]
+    },
+    {
+      "id": 11,
+      "story_id": 11,
+      "title": "Chapeuzinho amarelo",
+      "cover_img_path": "",
+      "age": [
+        8,
+        9
+      ]
+    },
+    {
+      "id": 12,
+      "story_id": 12,
+      "title": "A princesa que era uma vez",
+      "cover_img_path": "",
+      "age": [
+        8,
+        9
+      ]
+    }
+  ]
 }

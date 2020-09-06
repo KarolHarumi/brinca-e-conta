@@ -1,11 +1,29 @@
 class OnboardingController {
-  constructor() {
-    // -
+  constructor(StoryService) {
+    this.StoryService = StoryService;
   }
 
   async index(req, res) {
-    return res.json({ message: "Ok" });
+    try {
+      const { age } = req.params;
+      const list = await this.StoryService.getOnboardingStories();
+      const response = list.filter((story) =>
+        story.age.find((item) => item == age)
+      );
+
+      return res.json(
+        response.map((item) => {
+          const { story_id, title, cover_img_path } = item;
+
+          return { story_id, title, cover_img_path };
+        })
+      );
+    } catch (err) {
+      return res.status(500).json({
+        error: `internal error: ${JSON.stringify(err.stack ? err.stack : err)}`,
+      });
+    }
   }
 }
 
-module.exports = new OnboardingController();
+module.exports = OnboardingController;
