@@ -24,28 +24,27 @@ export default {
         { text: "Olá! Que bom ter você por aqui!" },
         {
           text:
-            'Me chamo <span style="color: #81d152">Caré</span> e serei seu parceiro nesse mundo fantástico da imaginação!',
+            'Me chamo <span style="color: #81d152">Caré</span> e serei seu parceiro nesse mundo fantástico da imaginação!'
         },
         {
           text: "Pra começar, me conta mais sobre você!",
           action: {
             label: "Como você quer ser chamado(a)?",
-            propertyName: "name",
-          },
+            propertyName: "name"
+          }
         },
         {
           text: "Você sabia que o seu aniversário é uma data mágica?",
-          action: { label: "Quantos anos você tem?", propertyName: "age" },
+          action: { label: "Quantos anos você tem?", propertyName: "age" }
         },
         {
-          text:
-            "Eba! Estamos muito perto de entrar no mundo da brinca e conta!",
+          text: "Eba! Estamos muito perto de entrar no mundo da brinca e conta!"
         },
         {
           text: "Vamos começar nossa aventura!",
-          action: { label: "Escolha uma história", propertyName: "story" },
-        },
-      ],
+          action: { label: "Escolha uma história", propertyName: "story" }
+        }
+      ]
     };
   },
   computed: {
@@ -54,13 +53,13 @@ export default {
     },
     showAction() {
       return this.currentElement.action;
-    },
+    }
   },
   methods: {
     stepsNav(e) {
-      const action = e.path.find((item) =>
+      const action = e.path.find(item =>
         item.classList
-          ? Array.from(item.classList).find((a) => /next/.test(a))
+          ? Array.from(item.classList).find(a => /next/.test(a))
           : null
       );
 
@@ -81,8 +80,8 @@ export default {
       }
 
       this.stepsCount += 1;
-    },
-  },
+    }
+  }
 };
 </script>
 
