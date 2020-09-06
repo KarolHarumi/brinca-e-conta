@@ -14,9 +14,9 @@ class UserController {
 
       return res.json({ id, name, email });
     } catch (err) {
-      return res
-        .status(500)
-        .json({ error: JSON.stringify(err.stack ? err.stack : err) });
+      return res.status(500).json({
+        error: `internal error: ${JSON.stringify(err.stack ? err.stack : err)}`,
+      });
     }
   }
 }
