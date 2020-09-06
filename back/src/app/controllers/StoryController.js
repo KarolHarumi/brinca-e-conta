@@ -16,7 +16,16 @@ class StoryController {
   }
 
   async show(req, res) {
-    return res.json({ message: "Ok" });
+    try {
+      const { id } = req.params;
+      const story = await this.StoryService.getStoryById(id);
+
+      return res.json(story);
+    } catch (err) {
+      return res.status(500).json({
+        error: `internal error: ${JSON.stringify(err.stack ? err.stack : err)}`,
+      });
+    }
   }
 }
 
