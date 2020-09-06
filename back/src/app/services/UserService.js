@@ -14,7 +14,7 @@ class UserService {
     return await bcrypt.hash(password, 8);
   }
 
-  async getByEmail(email) {
+  async getUserByEmail(email) {
     const users = database.get("users");
 
     return users.find((user) => user.email === email);
@@ -24,7 +24,7 @@ class UserService {
     return bcrypt.compare(password, passwordHash);
   }
 
-  async register(newUser) {
+  async registerUser(newUser) {
     newUser.password_hash = await this._generatePassword(newUser.password);
     delete newUser.password;
 

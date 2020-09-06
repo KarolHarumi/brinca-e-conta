@@ -6,12 +6,12 @@ class UserController {
 
   async store(req, res) {
     try {
-      const userExists = await this.UserService.getByEmail(req.body.email);
+      const userExists = await this.UserService.getUserByEmail(req.body.email);
 
       if (userExists)
         return res.status(400).json({ error: "User already exists" });
 
-      const { id, name, email, age } = await this.UserService.register(
+      const { id, name, email, age } = await this.UserService.registerUser(
         req.body
       );
 
