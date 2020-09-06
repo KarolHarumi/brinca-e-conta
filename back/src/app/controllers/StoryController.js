@@ -1,4 +1,4 @@
-class StoriesController {
+class StoryController {
   constructor() {
     // -
   }
@@ -12,4 +12,4 @@ class StoriesController {
   }
 }
 
-module.exports = new StoriesController();
+module.exports = new StoryController();

@@ -1,4 +1,4 @@
-class ChallengesController {
+class ChallengeController {
   constructor() {
     // -
   }
@@ -8,4 +8,4 @@ class ChallengesController {
   }
 }
 
-module.exports = new ChallengesController();
+module.exports = new ChallengeController();

@@ -1,4 +1,4 @@
-class AnswersController {
+class AnswerController {
   constructor() {
     // -
   }
@@ -8,4 +8,4 @@ class AnswersController {
   }
 }
 
-module.exports = new AnswersController();
+module.exports = new AnswerController();

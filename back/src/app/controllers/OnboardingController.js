@@ -1,4 +1,4 @@
-class PopularStoriesController {
+class OnboardingController {
   constructor() {
     // -
   }
@@ -8,4 +8,4 @@ class PopularStoriesController {
   }
 }
 
-module.exports = new PopularStoriesController();
+module.exports = new OnboardingController();
