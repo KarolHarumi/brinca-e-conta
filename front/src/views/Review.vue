@@ -6,7 +6,7 @@
     <p class="balloon">Você gostou dessa história?<br /> É só tocar o emoji!</p>
 
     <div class="thanks hide">
-      <p class="balloon">Obrigada pela resposta! Vamos nos divertir nos mini-games!</p>
+      <p class="balloon">Obrigado pela resposta! Vamos nos divertir nos mini-games!</p>
       <router-link to="/game-first" class="button-primary">Quero os joguinhos!</router-link>
     </div>
   </div>
