@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-
-    <Footer />
+    <Header />
+    <Footer :icon="'home'" />
 
     <div class="cards-container">
       <md-card>
@@ -12,7 +12,7 @@
           </md-card-header-text>
 
           <md-card-media md-big>
-            <img src="../assets/books/cover_mock.png" alt="Capa">
+            <img src="../assets/books/cover_mock.png" alt="Capa" />
           </md-card-media>
         </md-card-header>
 
@@ -32,7 +32,7 @@
           </md-card-header-text>
 
           <md-card-media md-big>
-            <img src="../assets/books/cover_mock.png" alt="Capa">
+            <img src="../assets/books/cover_mock.png" alt="Capa" />
           </md-card-media>
         </md-card-header>
 
@@ -52,7 +52,7 @@
           </md-card-header-text>
 
           <md-card-media md-big>
-            <img src="../assets/books/cover_mock.png" alt="Capa">
+            <img src="../assets/books/cover_mock.png" alt="Capa" />
           </md-card-media>
         </md-card-header>
 
@@ -64,41 +64,37 @@
         </md-card-actions>
       </md-card>
     </div>
-
   </div>
 </template>
 
 <script>
-
-import Footer from '@/components/Footer.vue'
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    Footer,
+    Header,
+    Footer
   }
-}
+};
 </script>
 
 <style>
-  .home {
-    padding: 0 5%;
-  }
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+}
 
-  .cards-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: stretch;
-    align-content: stretch;
-  }
+.md-card {
+  margin-bottom: 5%;
+}
 
-  .md-card {
-    margin-bottom: 5%;
-  }
-
-  .md-card:last-child {
-    margin-bottom: 25%;
-  }
+.md-card:last-child {
+  margin-bottom: 25%;
+}
 </style>
