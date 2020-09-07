@@ -51,7 +51,10 @@ export default {
         {
           text: "Você sabia que o seu aniversário é uma data mágica?",
           className: "care-3",
-          action: { label: "Quantos anos você tem?", propertyName: "age" }
+          action: {
+            label: "Quantos anos você tem?",
+            propertyName: "age"
+          }
         },
         {
           text:
@@ -142,7 +145,7 @@ export default {
 }
 
 .care-3 {
-  background: #fff url("../assets/care/care_3.png") no-repeat -20% 2100%/240px;
+  background: #fff url("../assets/care/care_3.png") no-repeat -17% 190%/250px;
 }
 
 .care-4 {
@@ -159,14 +162,13 @@ export default {
   background: url("../assets/balloon_left.png") no-repeat center/contain;
   color: #6f6f6f;
   position: absolute;
-  bottom: 410px;
+  bottom: 450px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
-  align-items: stretch;
-  align-content: stretch;
   padding: 0 2em;
+  right: 0;
 }
 
 .onboarding .speech .speech-balloon p {
