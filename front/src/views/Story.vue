@@ -15,7 +15,7 @@
       <div class="nav" @click="startStory()">
         <h1>Lenda da Vitória Régia</h1>
         <h2>Olá {{ name }}!</h2>
-        <p>Preparada para deixar nossa historinha ainda mais divertida?</p>
+        <p>Preparado(a) para deixar nossa historinha ainda mais divertida?</p>
       </div>
 
       <div id="scenario">
@@ -129,17 +129,17 @@ export default {
         },
         {
           sentence: 'E uma planta formada por uma grande bolha em forma de círculo e com bordas levantadas começou a erguer Naiá até a superfície.',
-          position: 'bottom: 50px',
+          position: 'bottom: 50px'
+        },
+        {
+          sentence: 'Esta planta é conhecida como Vitória Régia. Desde então, a indiazinha passou a ser chamada pelo nome da famosa planta amazônica.',
+          position: 'top: 50px',
           choices: {
             text: 'Que susto! Ainda bem que essa plantinha ajudou a Naiá a chegar a superfície!',
             question: 'Vamos escolher onde a planta pode deixar a indiazinha em segurança!',
             answers: ['Na grama verdinha', 'Ao lado de uma árvore florida'],
             background: 3,
           }
-        },
-        {
-          sentence: 'Esta planta é conhecida como Vitória Régia. Desde então, a indiazinha passou a ser chamada pelo nome da famosa planta amazônica.',
-          position: 'top: 50px'
         },
         {
           sentence: 'Flutuando nas beiras dos rios sobre uma grande raíz redonda. A Vitória Régia é muito caridosa e distribui plantas para os animais da floresta.',
@@ -314,6 +314,10 @@ export default {
     color: #fff;
     font-size: 18px;
     line-height: 1.3;
+  }
+
+  #scenario .dialog p {
+    margin: 0;
   }
 
   .story,

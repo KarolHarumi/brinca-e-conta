@@ -8,7 +8,7 @@
         <div class="avatar"></div>
         <div class="greetings">
           <h2 class="welcome">
-            Bem vindo, <span class="user-name">{{ name }}</span>
+            Bem vindo(a), <span class="user-name">{{ name }}</span>
           </h2>
           <p class="disclaimer">
             Aqui você pode escolher qual é a sua próxima aventura! Vamos juntos?
