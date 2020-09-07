@@ -5,7 +5,7 @@
         <img src="../assets/splash_icon.png" width="129" alt="brinca e conta" />
         <span class="title">brinca e conta</span>
     </h1>
-    
+
     <button class="button-primary" @click="defineAccess()">Começar</button>
   </div>
 </template>

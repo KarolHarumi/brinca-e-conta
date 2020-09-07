@@ -31,6 +31,8 @@
 
 <script>
 
+import router from './../router'
+
 export default {
 
   data: function() {
@@ -157,22 +159,23 @@ export default {
         const totalDialogs = dialogs.length;
         this.index++;
 
-        let current = dialogs[this.index]
+        let current = dialogs[this.index];
 
-        if (current.choices) {
-          this.choiceText = current.choices.text;
-          this.choiceQuestion = current.choices.question;
-          this.choiceAnswers = current.choices.answers;
-          this.choiceBackground = current.choices.background;
-
-          document.querySelector('.choice-modal').classList.remove('hide');
-        }
-
-        if(this.index <= (totalDialogs - 1)) {
+        if(this.index < totalDialogs) {
           this.sentences = dialogs[this.index].sentence;
           this.position = dialogs[this.index].position;
+
+          if (current.choices) {
+            this.choiceText = current.choices.text;
+            this.choiceQuestion = current.choices.question;
+            this.choiceAnswers = current.choices.answers;
+            this.choiceBackground = current.choices.background;
+
+            document.querySelector('.choice-modal').classList.remove('hide');
+          }
         } else {
-            this.index = totalDialogs;
+          this.index = totalDialogs -1;
+          router.push({ path:'review' });
         }
 
       });

@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    
+
     <HelloWorld msg="Estante Encantada"/>
 
     <div class="cards-container">
@@ -17,7 +17,7 @@
         </md-card-header>
 
         <md-card-actions>
-          <router-link to="/story/123" class="md-dense md-raised md-primary">
+          <router-link to="/story" class="md-dense md-raised md-primary">
             <md-button>Ler</md-button>
           </router-link>
           <md-button>Favoritar</md-button>
@@ -37,7 +37,7 @@
         </md-card-header>
 
         <md-card-actions>
-          <router-link to="/story/123" class="md-dense md-raised md-primary">
+          <router-link to="/story" class="md-dense md-raised md-primary">
             <md-button>Ler</md-button>
           </router-link>
           <md-button>Favoritar</md-button>
@@ -57,7 +57,7 @@
         </md-card-header>
 
         <md-card-actions>
-          <router-link to="/story/123" class="md-dense md-raised md-primary">
+          <router-link to="/story" class="md-dense md-raised md-primary">
             <md-button>Ler</md-button>
           </router-link>
           <md-button>Favoritar</md-button>
@@ -96,7 +96,7 @@ export default {
 
   .md-card {
     margin-bottom: 5%;
-  } 
+  }
 
   .md-card:last-child {
     margin-bottom: 25%;

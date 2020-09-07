@@ -26,9 +26,15 @@ Vue.use(VueRouter)
     component: () => import('../views/Register.vue')
   },
   {
-    path: '/story/123',
+    path: '/story',
     name: 'Story',
     component: () => import('../views/Story.vue')
+  },
+
+  {
+    path: '/review',
+    name: 'Review',
+    component: () => import('../views/Review.vue')
   }
 ]
 
