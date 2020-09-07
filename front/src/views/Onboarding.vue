@@ -13,9 +13,15 @@
           <button class="next">Enviar</button>
         </slot>
         <slot v-else>
-          <button class="stories story-1"></button>
-          <button class="stories story-2"></button>
-          <button class="stories story-3"></button>
+          <router-link to="/story/123" class="stories story-1">
+            <button></button>
+          </router-link>
+          <router-link to="/story/123" class="stories story-2">
+            <button></button>
+          </router-link>
+          <router-link to="/story/123" class="stories story-3">
+            <button></button>
+          </router-link>
         </slot>
       </div>
     </div>
