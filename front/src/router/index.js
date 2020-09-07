@@ -41,6 +41,12 @@ Vue.use(VueRouter)
     path: '/game-first',
     name: 'GameFirst',
     component: () => import('../views/GameFirst.vue')
+  },
+
+  {
+    path: '/game-second',
+    name: 'GameSecond',
+    component: () => import('../views/GameSecond.vue')
   }
 ]
 
