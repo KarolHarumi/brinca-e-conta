@@ -55,6 +55,7 @@ export default {
   z-index: 10;
   left: 0;
   right: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 .footer .md-ripple {
