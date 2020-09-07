@@ -77,7 +77,7 @@ export default {
     color: #fff;
     font-size: 20px;
     text-align: center;
-    padding: 15% 20px 0;
+    padding: 40px 20px 0;
     line-height: 1.3;
   }
 

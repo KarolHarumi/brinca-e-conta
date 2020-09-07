@@ -71,7 +71,7 @@
     background-color: #78d6fd;
     border-top-left-radius: 10%;
     border-top-right-radius: 10%;
-    padding: 2em;
+    padding: 2em 1em;
     color: #fff;
     display: flex;
     flex-flow: column;

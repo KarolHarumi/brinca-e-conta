@@ -27,9 +27,9 @@
       </section>
       <section class="finished">
         <h3 class="title">Seus livros lidos</h3>
-        <div class="container -horizontal-scroll">
+        <router-link to="/story" class="container -horizontal-scroll">
           <button class="story-card -vitoria-regia-finished"></button>
-        </div>
+        </router-link>
       </section>
       <section class="categories">
         <h3 class="title">Categorias</h3>

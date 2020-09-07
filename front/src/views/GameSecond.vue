@@ -56,7 +56,7 @@ export default {
     color: #fff;
     font-size: 20px;
     text-align: center;
-    padding: 15% 40px 0 40px;
+    padding: 40px 40px 0 40px;
     line-height: 1.3;
   }
 

@@ -46,21 +46,9 @@ export default {
         choiceText: '',
         choiceQuestion: '',
         choiceAnswers: '',
-        choiceBackground: 0
-      }
-  },
+        choiceBackground: 0,
 
-  methods: {
-
-    startStory() {
-      document.querySelector('.dialog').classList.remove('hide');
-      document.querySelector('.nav').classList.add('hide');
-
-      this.storyNavigate();
-    },
-
-    storyNavigate() {
-      const dialogs = [
+        dialogs: [
         {
           sentence: '',
           position: 'top: 25%'
@@ -87,7 +75,7 @@ export default {
           choices: {
             text: 'A indiazinha Naiá é muito vaidosa!',
             question: 'Como ela deveria enfeitar os cabelos?',
-            answers: ['Com tranças', 'Com arquinho'],
+            answers: ['Com tranças', 'Solto'],
             background: 0,
           }
         },
@@ -153,17 +141,30 @@ export default {
           sentence: '...flores brancas e perfumadas florescem de sua raíz enquanto contempla a luz da lua e o brilho das estrelas.',
           position: 'top: 25%'
         }
-      ];
+      ]
 
+      }
+  },
+
+  methods: {
+
+    startStory() {
+      document.querySelector('.dialog').classList.remove('hide');
+      document.querySelector('.nav').classList.add('hide');
+
+      this.storyNavigate();
+    },
+
+    storyNavigate() {
       document.querySelector('.container-scenario').addEventListener('click', () => {
-        const totalDialogs = dialogs.length;
+        const totalDialogs = this.dialogs.length;
         this.index++;
 
-        let current = dialogs[this.index];
+        let current = this.dialogs[this.index];
 
         if(this.index < totalDialogs) {
-          this.sentences = dialogs[this.index].sentence;
-          this.position = dialogs[this.index].position;
+          this.sentences = this.dialogs[this.index].sentence;
+          this.position = this.dialogs[this.index].position;
 
           if (current.choices) {
             this.choiceText = current.choices.text;
@@ -182,9 +183,9 @@ export default {
     },
 
     getChoice() {
-      var selected = document.querySelector('.button-primary').textContent;
-      document.querySelector('.choice-modal').classList.add('hide');
+      let selected = document.querySelector('.button-primary').textContent;
       console.log('Alternativa selecionada: ', selected);
+      document.querySelector('.choice-modal').classList.add('hide');
     }
   }
 }

@@ -37,8 +37,8 @@ export default {
 
   .review {
     font-family: 'Fredoka One', cursive;
-    background: url('../assets/bg_review.png') no-repeat 0 0/cover;
-    height: 100vh;
+    background: #102F11 url('../assets/bg_review.png') no-repeat center 0/cover;
+    min-height: 100vh;
     color: #fff;
     font-size: 20px;
     text-align: center;
@@ -61,8 +61,8 @@ export default {
   }
 
   .review > .balloon {
-    top: 255px;
-    left: 50px;
+    top: 245px;
+    left: 45px;
   }
 
   /* thanks */
@@ -76,8 +76,8 @@ export default {
   }
 
   .review .thanks .balloon {
-    top: 160px;
-    left: 145px;
+    top: 150px;
+    left: 130px;
   }
 
   .review .button-primary {

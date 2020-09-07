@@ -9,7 +9,7 @@
       <div class="action" v-if="showAction">
         <label>{{ currentElement.action.label }}</label>
         <slot v-if="stepsCount < flow.length - 1">
-          <input :id="currentElement.action.propertyName" />
+          <input :id="currentElement.action.propertyName" autocomplete="off" />
           <button class="next">Enviar</button>
         </slot>
         <slot v-else>
@@ -138,7 +138,7 @@ export default {
 }
 
 .care-2 {
-  background: #fff url("../assets/care/care_2.png") no-repeat 0% 191%/250px;
+  background: #fff url("../assets/care/care_2.png") no-repeat 0% 151%/250px;
 }
 
 .care-3 {
@@ -150,7 +150,7 @@ export default {
 }
 
 .care-5 {
-  background: #fff url("../assets/care/care_5.png") no-repeat -145% 240%/250px;
+  background: #fff url("../assets/care/care_5.png") no-repeat -130% 240%/250px;
 }
 
 .onboarding .speech .speech-balloon {
