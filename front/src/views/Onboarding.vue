@@ -1,15 +1,22 @@
 <template>
   <div class="onboarding">
     <div class="step" @click="stepsNav">
-      <div class="speech">
+      <div class="speech" :class="currentElement.className">
         <div class="speech-balloon">
           <p v-html="currentElement.text"></p>
         </div>
       </div>
       <div class="action" v-if="showAction">
         <label>{{ currentElement.action.label }}</label>
-        <input :id="currentElement.action.propertyName" />
-        <button class="next">Enviar</button>
+        <slot v-if="stepsCount < flow.length - 1">
+          <input :id="currentElement.action.propertyName" />
+          <button class="next">Enviar</button>
+        </slot>
+        <slot v-else>
+          <button class="stories story-1"></button>
+          <button class="stories story-2"></button>
+          <button class="stories story-3"></button>
+        </slot>
       </div>
     </div>
   </div>
@@ -21,13 +28,15 @@ export default {
     return {
       stepsCount: 0,
       flow: [
-        { text: "Olá! Que bom ter você por aqui!" },
+        { text: "Olá! Que bom ter você por aqui!", className: "care-1" },
         {
           text:
-            'Me chamo <span style="color: #81d152">Caré</span> e serei seu parceiro nesse mundo fantástico da imaginação!'
+            'Me chamo <span style="color: #81d152">Caré</span> e serei seu parceiro nesse mundo fantástico da imaginação!',
+          className: "care-1"
         },
         {
           text: "Pra começar, me conta mais sobre você!",
+          className: "care-2",
           action: {
             label: "Como você quer ser chamado(a)?",
             propertyName: "name"
@@ -35,13 +44,17 @@ export default {
         },
         {
           text: "Você sabia que o seu aniversário é uma data mágica?",
+          className: "care-3",
           action: { label: "Quantos anos você tem?", propertyName: "age" }
         },
         {
-          text: "Eba! Estamos muito perto de entrar no mundo da brinca e conta!"
+          text:
+            "Eba! Estamos muito perto de entrar no mundo da brinca e conta!",
+          className: "care-4"
         },
         {
           text: "Vamos começar nossa aventura!",
+          className: "care-5",
           action: { label: "Escolha uma história", propertyName: "story" }
         }
       ]
@@ -96,7 +109,6 @@ export default {
   min-height: 100vh;
   transition: opacity 1s;
   text-align: center;
-  background: #fff url(/img/care.acefbf7e.png) no-repeat left bottom/250px;
   font-size: 18px;
   font-family: "Fredoka One", cursive;
 }
@@ -115,10 +127,30 @@ export default {
   display: flex;
 }
 
+.care-1 {
+  background: #fff url("../assets/care/care.png") no-repeat left bottom/250px;
+}
+
+.care-2 {
+  background: #fff url("../assets/care/care_2.png") no-repeat 0% 191%/250px;
+}
+
+.care-3 {
+  background: #fff url("../assets/care/care_3.png") no-repeat -20% 2100%/240px;
+}
+
+.care-4 {
+  background: #fff url("../assets/care/care_4.png") no-repeat -300% bottom/335px;
+}
+
+.care-5 {
+  background: #fff url("../assets/care/care_5.png") no-repeat -145% 240%/250px;
+}
+
 .onboarding .speech .speech-balloon {
   width: 288px;
-  height: 230px;
-  background: url(/img/balloon_01.5c7766d5.png) no-repeat center/contain;
+  height: 200px;
+  background: url("../assets/balloon_left.png") no-repeat center/contain;
   color: #6f6f6f;
   position: absolute;
   bottom: 410px;
@@ -128,7 +160,7 @@ export default {
   justify-content: center;
   align-items: stretch;
   align-content: stretch;
-  padding: 0 25px;
+  padding: 0 2em;
 }
 
 .onboarding .speech .speech-balloon p {
@@ -167,8 +199,11 @@ export default {
   outline: none;
 }
 
+.onboarding .action button {
+  border: none;
+}
+
 .onboarding .action .next {
-  border: navajowhite;
   background-color: #ecbf2b;
   font-family: inherit;
   box-shadow: 0px 3px 0px 0px #c19c25;
@@ -176,48 +211,30 @@ export default {
   color: inherit;
   padding: 0.5em 2em;
 }
+
 .onboarding .action input,
 .onboarding .action .next {
   border-radius: 30px;
 }
 
-.container-stories {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+.onboarding .action .stories {
+  font-size: 22px;
+  padding: 1.5em;
+  border-radius: 50px !important;
+  box-shadow: 0px 4px 0px 0px #62bbe0;
+  margin: 0.3em 0;
+  width: 100%;
 }
 
-.container-stories > h2 {
-  color: #272425;
+.onboarding .action .stories.story-1 {
+  background: url("../assets/cta_vitoria_regia.png") no-repeat top/cover;
 }
 
-.container-stories .carousel-stories {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: stretch;
-  align-content: stretch;
-  margin-bottom: 20px;
-  padding: 0 10px;
+.onboarding .action .stories.story-2 {
+  background: url("../assets/cta_boitata.png") no-repeat top/cover;
 }
 
-.carousel-stories .cover {
-  border: 1px solid;
-  width: 33.33%;
-  position: relative;
-}
-
-.cover + .cover {
-  margin-left: 10px;
-}
-
-.carousel-stories .cover .story-name {
-  background-color: #fff;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 10px;
+.onboarding .action .stories.story-3 {
+  background: url("../assets/cta_boto_rosa.png") no-repeat top/cover;
 }
 </style>
