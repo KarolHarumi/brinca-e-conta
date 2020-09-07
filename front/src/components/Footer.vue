@@ -78,4 +78,8 @@ export default {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+
+.md-bottom-bar.md-type-shift .md-bottom-bar-item.md-active {
+  min-width: 86px !important;
+}
 </style>
