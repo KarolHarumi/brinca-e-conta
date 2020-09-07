@@ -35,6 +35,12 @@ Vue.use(VueRouter)
     path: '/review',
     name: 'Review',
     component: () => import('../views/Review.vue')
+  },
+
+  {
+    path: '/game-first',
+    name: 'GameFirst',
+    component: () => import('../views/GameFirst.vue')
   }
 ]
 

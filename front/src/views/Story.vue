@@ -290,6 +290,11 @@ export default {
     margin-top: 25px;
   }
 
+  .choice-modal .button-primary:active,
+  .choice-modal .button-primary:hover {
+    background-color: #2F7B23;
+  }
+
   #scenario {
     position: relative;
   }

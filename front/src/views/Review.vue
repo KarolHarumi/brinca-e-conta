@@ -7,7 +7,7 @@
 
     <div class="thanks hide">
       <p class="balloon">Obrigada pela resposta! Vamos nos divertir nos mini-games!</p>
-      <router-link to="/games" class="button-primary">Quero os joguinhos!</router-link>
+      <router-link to="/game-first" class="button-primary">Quero os joguinhos!</router-link>
     </div>
   </div>
 </template>
@@ -96,5 +96,10 @@ export default {
     bottom: 5%;
     left: 20px;
     right: 20px;
+  }
+
+  .review .button-primary:active,
+  .review .button-primary:hover {
+    background-color: #2F7B23;
   }
 </style>
