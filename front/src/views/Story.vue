@@ -82,10 +82,10 @@ export default {
           position: 'top: 20px',
         },
         {
-          sentence: 'Ela sempre foi conhecida em sua aldeia por ser apaixonada pela luz da lua. Mal podia esperar que o sel se retirasse para que a noite chegasse e então ela pudesse contemplar a luz do luar.',
+          sentence: 'Ela sempre foi conhecida em sua aldeia por ser apaixonada pela luz da lua. Mal podia esperar que o sol se retirasse para que a noite chegasse e então ela pudesse contemplar a luz do luar.',
           position: 'bottom: 20px',
           choices: {
-            text: 'Como a indiazinha Naiá é bonita!',
+            text: 'A indiazinha Naiá é muito vaidosa!',
             question: 'Como ela deveria enfeitar os cabelos?',
             answers: ['Com tranças', 'Com arquinho'],
             background: 0,
@@ -96,7 +96,7 @@ export default {
           position: 'bottom: 15%'
         },
         {
-          sentence: 'Chegando até a beira do rio avistou um facho de luz sobre a água. Nesse momento se apoiou sobre uma pedra para chegar mais perto.',
+          sentence: `Chegando até a beira do rio avistou um facho de luz sobre a água. Nesse momento se apoiou sobre uma pedra para chegar mais perto.`,
           position: 'top: 20px',
           choices: {
             text: 'Vamos ajudar a indiazinha Naiá!',
