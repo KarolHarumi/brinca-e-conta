@@ -50,7 +50,6 @@ export default {
   font-size: 24px;
   padding: 1em;
   color: #fff;
-  margin-bottom: 0.5em;
 }
 
 .header .menu {
