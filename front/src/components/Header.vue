@@ -1,8 +1,8 @@
 <template>
   <div class="header">
-    <div class="menu"></div>
-    <span class="logo" text="Logo brinca e conta">brinca e conta</span>
-    <div class="notifications"></div>
+    <div class="menu"><md-icon>menu</md-icon></div>
+    <h1 class="logo" text="Logo brinca e conta">brinca e conta</h1>
+    <div class="notifications"><md-icon>notifications</md-icon></div>
   </div>
 </template>
 
@@ -52,19 +52,24 @@ export default {
   color: #fff;
 }
 
+.header .logo {
+  text-shadow: 0px 2px 0px #65bbde;
+  font-size: inherit;
+  margin: 0;
+}
+
 .header .menu {
   height: 24px;
   width: 24px;
-  background-color: #fff;
-}
-
-.header .logo {
-  text-shadow: 0px 2px 0px #65bbde;
 }
 
 .header .notifications {
   height: 24px;
   width: 24px;
-  background-color: #fff;
+}
+
+.header .menu i,
+.header .notifications i {
+  color: #fff !important;
 }
 </style>
