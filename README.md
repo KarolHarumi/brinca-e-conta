@@ -47,6 +47,7 @@ yarn serve
 
 - [Node](https://nodejs.org/en/) - A JavaScript runtime built on Chrome's V8 JavaScript engine
 - [Vue](https://vuejs.org/) - The Progressive JavaScript Framework
+- [Firebase](https://firebase.google.com/?hl=pt) (for hosting) - Helps mobile and web app teams succeed
 
 ## Authors
 
@@ -57,9 +58,11 @@ yarn serve
 
 ## Acknowledgments
 
+- To customize configurations see [Configuration Reference](https://cli.vuejs.org/config/).
+- Access our database modeling [here](https://github.com/KarolHarumi/brinca-e-conta/tree/master/data-model/db-model.png)
+
 Commands that can be usefull:
 
-- To customize configurations see [Configuration Reference](https://cli.vuejs.org/config/).
 - For the `front` Web APP
   - `yarn lint` lints and fixes files
   - `yarn build` compiles and minifies for production
