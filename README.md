@@ -60,6 +60,7 @@ yarn serve
 
 - To customize configurations see [Configuration Reference](https://cli.vuejs.org/config/).
 - Access our database modeling [here](https://github.com/KarolHarumi/brinca-e-conta/tree/master/data-model/db-model.png)
+- Credits to [Freepik](https://br.freepik.com/) and [Turma do Folclore](https://www.youtube.com/channel/UCD-Rh7fnSL2aeF9xviJ4LGw) for the images and texts we used
 
 Commands that can be usefull:
 
