@@ -1,0 +1,1373 @@
+{
+	"info": {
+		"_postman_id": "422e622b-35b8-4c61-829b-345398d78b3a",
+		"name": "brinca-e-conta",
+		"description": "Collection for the \"Brinca e Conta\" app REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/users",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Jane Doezinha\",\n    \"email\": \"jane.doe.zinha@email.com\",\n    \"birth_date\": \"2014-03-09\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				},
+				"description": "Create user"
+			},
+			"response": [
+				{
+					"name": "200:USER_CREATED",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Jane Doezinha\",\n    \"email\": \"jane.doe.zinha@email.com\",\n    \"birth_date\": \"2014-03-09\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "66"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"42-FJyGqbgy6eY+KfhXsFClpmHNQ64\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Sep 2020 00:02:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"name\": \"Jane Doezinha\",\n    \"email\": \"jane.doe.zinha@email.com\",\n    \"age\": 6\n}"
+				},
+				{
+					"name": "500:SERVER_ERROR",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Jane Doezinha\",\n    \"email\": \"jane.doe.zinha@email.com\",\n    \"birth_date\": \"2014-03-09\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1f-lFUySNKwX3L5eGEwGcNcUoVKWhE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Sep 2020 00:02:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"internal error: [ERROR_DESCRIPTION]\"\n}"
+				},
+				{
+					"name": "400:USER_ALREADY_EXISTS",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Jane Doezinha\",\n    \"email\": \"jane.doe.zinha@email.com\",\n    \"birth_date\": \"2014-03-09\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1f-lFUySNKwX3L5eGEwGcNcUoVKWhE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Sep 2020 00:02:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"User already exists\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"jane.doe.zinha@email.com\",\n    \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Login"
+			},
+			"response": [
+				{
+					"name": "401:USER_NOT_FOUND",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jane.doee.zinha@email.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-hq/hT0ORGTkTfyRpVCZ/JB/r8Eg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Sep 2020 00:14:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"User not found\"\n}"
+				},
+				{
+					"name": "200:USER_LOGGED",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jane.doe.zinha@email.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "223"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"df-eurSZrDPPHKxzjPz8eO2gthkNmQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Sep 2020 00:13:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"Jane Doezinha\",\n        \"email\": \"jane.doe.zinha@email.com\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTk5MzUxMTkzLCJleHAiOjE1OTkzNTQ3OTN9.8X32kW9hEEH5oyqt_mZMvps4dvghyyHXy8hXrz2X8Fw\"\n}"
+				},
+				{
+					"name": "401:WRONG_PASSWORD",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jane.doe.zinha@email.com\",\n    \"password\": \"1234567\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23-BHtpRChLbkvZs/fSm9DlbD8S+iE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Sep 2020 00:17:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Password does not match\"\n}"
+				},
+				{
+					"name": "500:SERVER_ERROR",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jane.doe.zinha@email.com\",\n    \"password\": \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "230"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e6-HDYMHN0zCAOBghZoGEfaw0faiyc\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Sep 2020 00:19:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"internal error: [ERROR_DESCRIPTION]\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/onboarding",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/onboarding/:age",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"onboarding",
+						":age"
+					],
+					"variable": [
+						{
+							"key": "age",
+							"value": "5"
+						}
+					]
+				},
+				"description": "Get onboarding stories"
+			},
+			"response": [
+				{
+					"name": "500:SERVER_ERROR",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/onboarding/:age",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"onboarding",
+								":age"
+							],
+							"variable": [
+								{
+									"key": "age",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "303"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12f-JY1SWoRHpg8XLE7MiVNWH+7PWMY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Sep 2020 01:44:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"internal error: [ERROR_DESCRIPTION]\"\n}"
+				},
+				{
+					"name": "200:STORIES_LIST",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/onboarding/:age",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"onboarding",
+								":age"
+							],
+							"variable": [
+								{
+									"key": "age",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "294"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"126-bl0Zuw/ovoVtshlwBUf4ha4duNs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Sep 2020 01:43:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"story_id\": 1,\n        \"title\": \"A lenda da vitória régia\",\n        \"cover_img_path\": \"\"\n    },\n    {\n        \"story_id\": 2,\n        \"title\": \"Ninguém é igual a ninguém\",\n        \"cover_img_path\": \"\"\n    },\n    {\n        \"story_id\": 3,\n        \"title\": \"Não gosto de salada\",\n        \"cover_img_path\": \"\"\n    },\n    {\n        \"story_id\": 4,\n        \"title\": \"Princesa Arabela mimada que só ela\",\n        \"cover_img_path\": \"\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/users/:id/skills",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "auth_token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"skill_id\": 1,\n        \"answers\": {\n            \"errors\": 2,\n            \"hitted\": true\n        }\n    },\n    {\n        \"skill_id\": 2,\n        \"answers\": {\n            \"errors\": 0,\n            \"hitted\": true\n        }\n    },\n    {\n        \"skill_id\": 3,\n        \"answers\": {\n            \"errors\": 1,\n            \"hitted\": true\n        }\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/users/:id/skills",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						":id",
+						"skills"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Update user's skills"
+			},
+			"response": [
+				{
+					"name": "401:UNAUTHORIZED",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"skill_id\": 1,\n        \"answers\": {\n            \"errors\": 2,\n            \"hitted\": true\n        }\n    },\n    {\n        \"skill_id\": 2,\n        \"answers\": {\n            \"errors\": 0,\n            \"hitted\": true\n        }\n    },\n    {\n        \"skill_id\": 3,\n        \"answers\": {\n            \"errors\": 1,\n            \"hitted\": true\n        }\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users/:id/skills",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id",
+								"skills"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18-XPDV80vbMk4yY1/PADG4jYM4rSI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Sep 2020 06:41:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Unauthorized\"\n}"
+				},
+				{
+					"name": "201:SUCCESS",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"skill_id\": 1,\n        \"answers\": {\n            \"errors\": 2,\n            \"hitted\": true\n        }\n    },\n    {\n        \"skill_id\": 2,\n        \"answers\": {\n            \"errors\": 0,\n            \"hitted\": true\n        }\n    },\n    {\n        \"skill_id\": 3,\n        \"answers\": {\n            \"errors\": 1,\n            \"hitted\": true\n        }\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/users/:id/skills",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"users",
+								":id",
+								"skills"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Sep 2020 06:36:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "/stories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "auth_token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/stories",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stories"
+					]
+				},
+				"description": "Get stories"
+			},
+			"response": [
+				{
+					"name": "401:UNAUTHORIZED",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/stories",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stories"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18-XPDV80vbMk4yY1/PADG4jYM4rSI\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Sep 2020 01:43:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Unauthorized\"\n}"
+				},
+				{
+					"name": "500:SERVER_ERROR",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/onboarding/:age",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"onboarding",
+								":age"
+							],
+							"variable": [
+								{
+									"key": "age",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "303"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12f-JY1SWoRHpg8XLE7MiVNWH+7PWMY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Sep 2020 01:44:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"internal error: [ERROR_DESCRIPTION]\"\n}"
+				},
+				{
+					"name": "200:STORIES_LIST",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/onboarding/:age",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"onboarding",
+								":age"
+							],
+							"variable": [
+								{
+									"key": "age",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "294"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"126-bl0Zuw/ovoVtshlwBUf4ha4duNs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Sep 2020 01:43:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"story_id\": 1,\n        \"title\": \"A lenda da vitória régia\",\n        \"cover_img_path\": \"\"\n    },\n    {\n        \"story_id\": 2,\n        \"title\": \"Ninguém é igual a ninguém\",\n        \"cover_img_path\": \"\"\n    },\n    {\n        \"story_id\": 3,\n        \"title\": \"Não gosto de salada\",\n        \"cover_img_path\": \"\"\n    },\n    {\n        \"story_id\": 4,\n        \"title\": \"Princesa Arabela mimada que só ela\",\n        \"cover_img_path\": \"\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/stories/:id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "auth_token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/stories/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stories",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Get a single story"
+			},
+			"response": [
+				{
+					"name": "401:UNAUTHORIZED",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/stories/:id",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stories",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18-XPDV80vbMk4yY1/PADG4jYM4rSI\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Sep 2020 01:43:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Unauthorized\"\n}"
+				},
+				{
+					"name": "500:SERVER_ERROR",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/onboarding/:age",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"onboarding",
+								":age"
+							],
+							"variable": [
+								{
+									"key": "age",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "303"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12f-JY1SWoRHpg8XLE7MiVNWH+7PWMY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Sep 2020 01:44:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"internal error: [ERROR_DESCRIPTION]\"\n}"
+				},
+				{
+					"name": "200:STORIES_LIST",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/onboarding/:age",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"onboarding",
+								":age"
+							],
+							"variable": [
+								{
+									"key": "age",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "294"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"126-bl0Zuw/ovoVtshlwBUf4ha4duNs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Sep 2020 01:43:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"story_id\": 1,\n        \"title\": \"A lenda da vitória régia\",\n        \"cover_img_path\": \"\"\n    },\n    {\n        \"story_id\": 2,\n        \"title\": \"Ninguém é igual a ninguém\",\n        \"cover_img_path\": \"\"\n    },\n    {\n        \"story_id\": 3,\n        \"title\": \"Não gosto de salada\",\n        \"cover_img_path\": \"\"\n    },\n    {\n        \"story_id\": 4,\n        \"title\": \"Princesa Arabela mimada que só ela\",\n        \"cover_img_path\": \"\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/stories/:id/challenges",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "auth_token",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/stories/:id/challenges",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stories",
+						":id",
+						"challenges"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				},
+				"description": "Get story challenges"
+			},
+			"response": [
+				{
+					"name": "200:STORY_CHALLENGES",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/stories/:id/challenges",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stories",
+								":id",
+								"challenges"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "202"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ca-zBi7fCgZmcHUj4085NlTMJb3xOM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Sep 2020 01:41:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"challenges\": [\n        {\n            \"question\": \"Qual personagem que virou a Lua?\",\n            \"answer\": \"Indiozinho\",\n            \"alternative\": \"Naiá\"\n        },\n        {\n            \"question\": \"Qual é a flor preferida da Naiá?\",\n            \"answer\": \"Rosas\",\n            \"alternative\": \"Margaridas\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "401:UNAUTHORIZED",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/stories/:id/challenges",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"stories",
+								":id",
+								"challenges"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18-XPDV80vbMk4yY1/PADG4jYM4rSI\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 08 Sep 2020 01:42:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Unauthorized\"\n}"
+				},
+				{
+					"name": "500:SERVER_ERROR",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/onboarding/:age",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"onboarding",
+								":age"
+							],
+							"variable": [
+								{
+									"key": "age",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "303"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12f-JY1SWoRHpg8XLE7MiVNWH+7PWMY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 06 Sep 2020 01:44:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"internal error: [ERROR_DESCRIPTION]\"\n}"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}
