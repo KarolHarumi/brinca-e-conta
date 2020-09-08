@@ -1,6 +1,6 @@
 # Brinca e Conta
 
-Progressive Web APP in VueJS and REST aPI in Node.js developed for Mega Hack Women - Árvore Challenge.
+Progressive Web APP in VueJS and REST API in Node.js developed for Mega Hack Women - Árvore Challenge.
 
 ## Getting Started
 
@@ -50,10 +50,10 @@ yarn serve
 
 ## Authors
 
-- **Karol Harumi** - _Initial work_ - [Daniela](https://github.com/KarolHarumi)
+- **Karol Harumi** - _Initial work_ - [Karol](https://github.com/KarolHarumi)
 - **Daniela Rocha** - _Initial work_ - [Daniela](https://github.com/danirochae)
-- **Alessandra Aranha** - _Design and UX_ - [Daniela](https://www.linkedin.com/in/aleearanha/)
-- **Carol Gonçalves** - \_Business Analyst - [Carol](https://www.linkedin.com/in/caroline-gon%C3%A7alves-80021940/)
+- **Alessandra Aranha** - _Design and UX_ - [Alessandra](https://www.linkedin.com/in/aleearanha/)
+- **Carol Gonçalves** - _Business Analyst_ - [Carol](https://www.linkedin.com/in/caroline-gon%C3%A7alves-80021940/)
 
 ## Acknowledgments
 
@@ -63,4 +63,4 @@ Commands that can be usefull:
 - For the `front` Web APP
   - `yarn lint` lints and fixes files
   - `yarn build` compiles and minifies for production
-  - `firebase deploy`deploys your app
+  - `firebase deploy` deploys your app
