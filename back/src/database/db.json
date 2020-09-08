@@ -71,62 +71,17 @@
   "stories": [
     {
       "id": 1,
-      "title": "A lenda da vitória régia",
+      "title": "A lenda da Vitória Régia",
       "cover_img_path": ""
     },
     {
       "id": 2,
-      "title": "Ninguém é igual a ninguém",
+      "title": "A lenda do Boitatá",
       "cover_img_path": ""
     },
     {
       "id": 3,
-      "title": "Não gosto de salada",
-      "cover_img_path": ""
-    },
-    {
-      "id": 4,
-      "title": "Princesa Arabela mimada que só ela",
-      "cover_img_path": ""
-    },
-    {
-      "id": 5,
-      "title": "Marcelo, marmelo, martelo",
-      "cover_img_path": ""
-    },
-    {
-      "id": 6,
-      "title": "ABC em libras",
-      "cover_img_path": ""
-    },
-    {
-      "id": 7,
-      "title": "A aranha Dailili",
-      "cover_img_path": ""
-    },
-    {
-      "id": 8,
-      "title": "A bela e a fera",
-      "cover_img_path": ""
-    },
-    {
-      "id": 9,
-      "title": "Cada bicho com seu capricho",
-      "cover_img_path": ""
-    },
-    {
-      "id": 10,
-      "title": "Meus olhos são teus olhos",
-      "cover_img_path": ""
-    },
-    {
-      "id": 11,
-      "title": "Chapeuzinho amarelo",
-      "cover_img_path": ""
-    },
-    {
-      "id": 12,
-      "title": "A princesa que era uma vez",
+      "title": "A lenda do Boto cor-de-rosa",
       "cover_img_path": ""
     }
   ],
@@ -135,43 +90,120 @@
       "id": 1,
       "story_id": 1,
       "text_content": "",
-      "background_img_path": "",
+      "background_img_path": "Ela sempre foi conhecida em sua aldeia por ser apaixonada pela luz da lua. Mal podia esperar que o sol se retirasse para que a noite chegasse e então ela pudesse contemplar a luz do luar.",
       "sort_order": 5
     },
     {
       "id": 2,
       "story_id": 1,
       "text_content": "",
-      "background_img_path": "",
+      "background_img_path": "E esta estrela foi crescendo, crescendo dando origem a Lua.",
       "sort_order": 2
     },
     {
       "id": 3,
       "story_id": 1,
       "text_content": "",
-      "background_img_path": "",
+      "background_img_path": "Há quem diga que muitos anos atrás um forte indiozinho havia se transformado em estrela.",
       "sort_order": 1
     },
     {
       "id": 4,
       "story_id": 1,
       "text_content": "",
-      "background_img_path": "",
+      "background_img_path": "Naiá era uma amante da natureza. Cuidava de rosas e plantas com muito carinho e amor. E adorava se enfeitar com elas.",
       "sort_order": 4
     },
     {
       "id": 5,
       "story_id": 1,
       "text_content": "",
-      "background_img_path": "",
+      "background_img_path": "Alguns não acreditam nessa história, mas outros sim, como a indiazinha Naiá.",
       "sort_order": 3
+    },
+    {
+      "id": 6,
+      "story_id": 1,
+      "text_content": "",
+      "background_img_path": "Até que em um dia de lua cheia ela notou de sua oca que o brilho da lua estava mais intenso e saiu para contempla-lo.",
+      "sort_order": 6
+    },
+    {
+      "id": 7,
+      "story_id": 1,
+      "text_content": "",
+      "background_img_path": "Chegando até a beira do rio avistou um facho de luz sobre a água. Nesse momento se apoiou sobre uma pedra para chegar mais perto.",
+      "sort_order": 7
+    },
+    {
+      "id": 8,
+      "story_id": 1,
+      "text_content": "",
+      "background_img_path": "Foi aí que viu a figura de um belo índio refletido na água vindo da Luz da Lua.",
+      "sort_order": 8
+    },
+    {
+      "id": 9,
+      "story_id": 1,
+      "text_content": "",
+      "background_img_path": "A indiazinha se encanta pelo índio, e num ato de impulso, tenta dar um beijo na imagem refletida.",
+      "sort_order": 9
+    },
+    {
+      "id": 10,
+      "story_id": 1,
+      "text_content": "",
+      "background_img_path": "Nesse momento ela se desequilibra, cai no rio e vai afundando, desacordada.",
+      "sort_order": 10
+    },
+    {
+      "id": 11,
+      "story_id": 1,
+      "text_content": "",
+      "background_img_path": "Até que um facho de luz atinge algumas plantas, raízes e algas do rio que despertam e se entrelaçam envolvendo Naiá.",
+      "sort_order": 11
+    },
+    {
+      "id": 12,
+      "story_id": 1,
+      "text_content": "",
+      "background_img_path": "E uma planta formada por uma grande bolha em forma de círculo e com bordas levantadas começou a erguer Naiá até a superfície.",
+      "sort_order": 12
+    },
+    {
+      "id": 13,
+      "story_id": 1,
+      "text_content": "",
+      "background_img_path": "Esta planta é conhecida como Vitória Régia. Desde então, a indiazinha passou a ser chamada pelo nome da famosa planta amazônica.",
+      "sort_order": 13
+    },
+    {
+      "id": 14,
+      "story_id": 1,
+      "text_content": "",
+      "background_img_path": "Flutuando nas beiras dos rios sobre uma grande raíz redonda. A Vitória Régia é muito caridosa e distribui plantas para os animais da floresta.",
+      "sort_order": 14
+    },
+    {
+      "id": 15,
+      "story_id": 1,
+      "text_content": "",
+      "background_img_path": "O suco extraído de suas raízes é utilizado como tintura negra para os cabelos e durante a noite...",
+      "sort_order": 15
+    },
+    {
+      "id": 16,
+      "story_id": 1,
+      "text_content": "",
+      "background_img_path": "...flores brancas e perfumadas florescem de sua raíz enquanto contempla a luz da lua e o brilho das estrelas.",
+      "sort_order": 16
     }
   ],
   "onboarding": [
     {
       "id": 1,
       "story_id": 1,
-      "title": "A lenda da vitória régia",
+      "title": "A lenda da Vitória Régia",
       "cover_img_path": "",
       "age": [
         5
@@ -180,7 +212,7 @@
     {
       "id": 2,
       "story_id": 2,
-      "title": "Ninguém é igual a ninguém",
+      "title": "A lenda do Boitatá",
       "cover_img_path": "",
       "age": [
         5
@@ -189,99 +221,10 @@
     {
       "id": 3,
       "story_id": 3,
-      "title": "Não gosto de salada",
+      "title": "A lenda do Boto cor-de-rosa",
       "cover_img_path": "",
       "age": [
         5
-      ]
-    },
-    {
-      "id": 4,
-      "story_id": 4,
-      "title": "Princesa Arabela mimada que só ela",
-      "cover_img_path": "",
-      "age": [
-        5
-      ]
-    },
-    {
-      "id": 5,
-      "story_id": 5,
-      "title": "Marcelo, marmelo, martelo",
-      "cover_img_path": "",
-      "age": [
-        6,
-        7
-      ]
-    },
-    {
-      "id": 6,
-      "story_id": 6,
-      "title": "ABC em libras",
-      "cover_img_path": "",
-      "age": [
-        6,
-        7
-      ]
-    },
-    {
-      "id": 7,
-      "story_id": 7,
-      "title": "A aranha Dailili",
-      "cover_img_path": "",
-      "age": [
-        6,
-        7
-      ]
-    },
-    {
-      "id": 8,
-      "story_id": 8,
-      "title": "A bela e a fera",
-      "cover_img_path": "",
-      "age": [
-        6,
-        7
-      ]
-    },
-    {
-      "id": 9,
-      "story_id": 9,
-      "title": "Cada bicho com seu capricho",
-      "cover_img_path": "",
-      "age": [
-        8,
-        9
-      ]
-    },
-    {
-      "id": 10,
-      "story_id": 10,
-      "title": "Meus olhos são teus olhos",
-      "cover_img_path": "",
-      "age": [
-        8,
-        9
-      ]
-    },
-    {
-      "id": 11,
-      "story_id": 11,
-      "title": "Chapeuzinho amarelo",
-      "cover_img_path": "",
-      "age": [
-        8,
-        9
-      ]
-    },
-    {
-      "id": 12,
-      "story_id": 12,
-      "title": "A princesa que era uma vez",
-      "cover_img_path": "",
-      "age": [
-        8,
-        9
       ]
     }
   ]
